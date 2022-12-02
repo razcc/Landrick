@@ -18,9 +18,12 @@ export default {
 <style lang="scss" scoped>
 #NavBar {
 	display: flex;
-	gap: 20px;
+	gap: 30px;
 	align-items: center;
 	text-transform: uppercase;
 	font-size: 1.5rem;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		sans-serif;
+	font-weight: bold;
 }
 </style>
