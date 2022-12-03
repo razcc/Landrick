@@ -8,12 +8,8 @@
 		<!-- Container Landing -->
 		<div
 			class="menuElementLanding"
-			@mouseenter="
-				(varSottoMenuLanding = true), (varControlloInputOnOFF = true)
-			"
-			@mouseleave="
-				(varSottoMenuLanding = false), (varControlloInputOnOFF = false)
-			"
+			@mouseenter="varSottoMenuLanding = true"
+			@mouseleave="varSottoMenuLanding = false"
 		>
 			<!-- titolo -->
 			<span class="landingTitle">LANDING</span>
@@ -215,6 +211,7 @@ export default {
 	gap: 20px;
 	height: 100%;
 	text-transform: uppercase;
+	position: relative;
 
 	// Menu Home
 	.menuElementHome {
@@ -265,7 +262,7 @@ export default {
 		.contSottoMenu {
 			position: absolute;
 			top: 100%;
-			left: 25%;
+			left: -25%;
 			gap: 50px;
 			display: flex;
 			justify-content: center;
@@ -381,7 +378,8 @@ export default {
 		.conSottoMenu {
 			position: absolute;
 			top: 100%;
-			left: 0%;
+			left: -50%;
+			width: 200%;
 			box-shadow: 5px 10px 10px gray;
 			padding-top: 50px;
 			display: flex;
@@ -439,7 +437,7 @@ export default {
 		.sottomenu {
 			position: absolute;
 			top: 100%;
-			left: 35%;
+			left: 0%;
 			box-shadow: 5px 10px 10px gray;
 			display: flex;
 			gap: 50px;

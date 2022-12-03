@@ -1,26 +1,24 @@
 <template>
-	<header>
-		<div id="contHeader">
-			<!-- Logo -->
-			<div class="contLogo">
-				<img src="../assets/img/logo-dark.png" alt="Logo" />
-			</div>
+	<header id="contHeader">
+		<!-- Logo -->
+		<div class="contLogo">
+			<img src="../assets/img/logo-dark.png" alt="Logo" />
+		</div>
 
-			<!-- NavBar Menu-->
-			<dir class="contNav">
-				<NavBarComp
-					:propsArrayLanding="propsArrayLanding"
-					:propsArrayPages="propsArrayPages"
-					:propsArrayDemos="propsArrayDemos"
-					:propsArrayComponents="propsArrayComponents"
-					:propsArrayDocs="propsArrayDocs"
-				/>
-			</dir>
+		<!-- NavBar Menu-->
+		<dir class="contNav">
+			<NavBarComp
+				:propsArrayLanding="propsArrayLanding"
+				:propsArrayPages="propsArrayPages"
+				:propsArrayDemos="propsArrayDemos"
+				:propsArrayComponents="propsArrayComponents"
+				:propsArrayDocs="propsArrayDocs"
+			/>
+		</dir>
 
-			<!-- Acesso Componente -->
-			<div class="contAcces">
-				<AccessOption />
-			</div>
+		<!-- Acesso Componente -->
+		<div class="contAcces">
+			<AccessOption />
 		</div>
 	</header>
 </template>
@@ -57,10 +55,10 @@ export default {
 
 <style lang="scss" scoped>
 #contHeader {
-	width: 80%;
 	height: 5vh;
+	width: 100%;
 	margin: auto;
-	padding-top: 30px;
+	padding: 20px 10px;
 	margin-bottom: 20px;
 	display: flex;
 	justify-content: space-around;
@@ -69,6 +67,7 @@ export default {
 	top: 0;
 	left: 0;
 	right: 0;
+	background-color: white;
 
 	.contNav {
 		height: 100%;
