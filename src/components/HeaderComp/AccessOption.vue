@@ -7,9 +7,16 @@
 			icon="fa-solid fa-magnifying-glass"
 		/>
 
-		<span class="searchContainer" v-if="varRicerca">
+		<span
+			class="searchContainer"
+			v-if="varRicerca"
+			@keyup.enter="varRicerca = false"
+		>
 			<input type="text" placeholder="Search" />
-			<font-awesome-icon icon="fa-solid fa-magnifying-glass" />
+			<font-awesome-icon
+				@click="varRicerca = false"
+				icon="fa-solid fa-magnifying-glass"
+			/>
 		</span>
 
 		<!-- Git icon -->
@@ -56,6 +63,7 @@ export default {
 	gap: 20px;
 	position: relative;
 
+	// Icona Searc
 	.search {
 		font-size: 1.5rem;
 		transition: all 0.3s;
@@ -65,19 +73,31 @@ export default {
 		}
 	}
 
+	// Input Serach
 	.searchContainer {
 		position: absolute;
 		top: 130%;
 		left: -100%;
 		box-shadow: 0 0 10px gray;
+		z-index: -1;
+
 		input {
 			height: 40px;
 			width: 250px;
 			border: none;
 			outline: none;
 		}
+
+		.fa-magnifying-glass {
+			font-size: 22px;
+			color: blue;
+			&:hover {
+				cursor: pointer;
+			}
+		}
 	}
 
+	// Contenitori 3 blocchi dia cesso
 	div {
 		background-color: #2f56d428;
 		border: 1px solid #e9ecef;

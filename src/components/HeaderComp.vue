@@ -1,14 +1,23 @@
 <template>
 	<header>
 		<div id="contHeader">
+			<!-- Logo -->
 			<div class="contLogo">
 				<img src="../assets/img/logo-dark.png" alt="Logo" />
 			</div>
 
+			<!-- NavBar -->
 			<dir class="contNav">
-				<NavBarComp :propsNavBar="propsNavBar" />
+				<NavBarComp
+					:propsArrayLanding="propsArrayLanding"
+					:propsArrayPages="propsArrayPages"
+					:propsArrayDemos="propsArrayDemos"
+					:propsArrayComponents="propsArrayComponents"
+					:propsArrayDocs="propsArrayDocs"
+				/>
 			</dir>
 
+			<!-- Acesso Componente -->
 			<div class="contAcces">
 				<AccessOption />
 			</div>
@@ -27,7 +36,21 @@ export default {
 		AccessOption,
 	},
 	props: {
-		propsNavBar: Array,
+		propsArrayLanding: Array,
+		propsArrayPages: Array,
+		propsArrayDemos: Array,
+		propsArrayComponents: Array,
+		propsArrayDocs: Array,
+	},
+	data() {
+		return {
+			varControlloInput: false,
+		};
+	},
+	methods: {
+		funzioneEmitInput(valoreEmitInput) {
+			this.varControlloInput = valoreEmitInput;
+		},
 	},
 };
 </script>
