@@ -17,6 +17,7 @@
 					page
 				</p>
 
+				<!-- Bottoni -->
 				<div class="contButton">
 					<button class="getStarted">Get Started</button>
 					<button class="documantation">Documantation</button>
@@ -31,12 +32,21 @@
 				<img src="../../assets/img/about.png" alt="About Us" />
 			</div>
 		</div>
+
+		<ClientiFidati :propsArrayCLientiFidati="propsArrayCLientiFidati" />
 	</div>
 </template>
 
 <script>
+import ClientiFidati from "./IntroFigli/ClientiFidati.vue";
 export default {
 	name: "IntroComp",
+	props: {
+		propsArrayCLientiFidati: Array,
+	},
+	components: {
+		ClientiFidati,
+	},
 };
 </script>
 

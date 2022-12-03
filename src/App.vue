@@ -10,7 +10,7 @@
 		/>
 
 		<!-- Main Comp -->
-		<MainComp />
+		<MainComp :propsArrayCLientiFidati="arrayCLientiFidati" />
 	</div>
 </template>
 
@@ -194,6 +194,16 @@ export default {
 					{ name: "CHANGELOG", link: "#" },
 					{ name: "WIDGET", link: "#" },
 				],
+			],
+
+			// Array Aziende Clienti Intro Comp
+			arrayCLientiFidati: [
+				"amazon.svg",
+				"google.svg",
+				"lenovo.svg",
+				"paypal.svg",
+				"shopify.svg",
+				"spotify.svg",
 			],
 		};
 	},

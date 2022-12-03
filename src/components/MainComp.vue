@@ -1,7 +1,7 @@
 <template>
 	<main>
 		<!-- Intro Comp -->
-		<IntroComp />
+		<IntroComp :propsArrayCLientiFidati="propsArrayCLientiFidati" />
 	</main>
 </template>
 
@@ -12,6 +12,9 @@ export default {
 	name: "MainComp",
 	components: {
 		IntroComp,
+	},
+	props: {
+		propsArrayCLientiFidati: Array,
 	},
 };
 </script>
