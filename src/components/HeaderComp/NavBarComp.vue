@@ -212,13 +212,14 @@ export default {
 <style lang="scss" scoped>
 #NavBar {
 	display: flex;
-	gap: 30px;
-	align-items: center;
+	gap: 20px;
+	height: 100%;
 	text-transform: uppercase;
-	position: relative;
 
 	// Menu Home
 	.menuElementHome {
+		display: flex;
+		align-items: center;
 		font-size: 1.5rem;
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
@@ -232,6 +233,8 @@ export default {
 
 	// Menu landing
 	.menuElementLanding {
+		display: flex;
+		align-items: center;
 		// Landing Title
 		.landingTitle {
 			font-size: 1.5rem;
@@ -261,14 +264,15 @@ export default {
 		// SottoMenu
 		.contSottoMenu {
 			position: absolute;
-			top: 50%;
-			left: -50%;
-			width: 200%;
+			top: 100%;
+			left: 25%;
 			gap: 80px;
 			display: flex;
 			justify-content: center;
 			box-shadow: 5px 10px 10px gray;
 			padding: 40px 20px;
+			background-color: white;
+
 			// Elementi del sottoMenu
 			.sottoMenuElement {
 				margin-bottom: 15px;
@@ -289,6 +293,8 @@ export default {
 
 	// Menu Pages
 	.menuElementPages {
+		display: flex;
+		align-items: center;
 		// Titolo Pages
 		.pagesTitle {
 			font-size: 1.5rem;
@@ -317,12 +323,13 @@ export default {
 		// SottoMenu
 		.contSottoMenu {
 			position: absolute;
-			top: 50%;
+			top: 100%;
 			gap: 20px;
 			display: flex;
 			flex-direction: column;
 			box-shadow: 5px 10px 10px gray;
 			padding: 50px 30px;
+			background-color: white;
 
 			// Elementi del sottoMenu
 			.sottoMenuElement {
@@ -343,7 +350,8 @@ export default {
 
 	// Menu demos
 	.menuElementDemos {
-		position: relative;
+		display: flex;
+		align-items: center;
 		// Titolo Pages
 		.pagesTitle {
 			font-size: 1.5rem;
@@ -373,16 +381,14 @@ export default {
 		// SottoMenu
 		.conSottoMenu {
 			position: absolute;
-			top: 50%;
-			left: -700%;
-			display: flex;
-			text-align: center;
-			align-items: center;
-			flex-wrap: wrap;
-			width: 1500%;
+			top: 100%;
+			left: 0%;
 			box-shadow: 5px 10px 10px gray;
 			padding-top: 50px;
-
+			display: flex;
+			flex-wrap: wrap;
+			text-align: center;
+			background-color: white;
 			img {
 				margin-bottom: 20px;
 			}
@@ -402,7 +408,8 @@ export default {
 
 	// Menu Components
 	.menuElementComponents {
-		position: relative;
+		display: flex;
+		align-items: center;
 		// Titolo Pages
 		.pagesTitle {
 			font-size: 1.5rem;
@@ -432,12 +439,13 @@ export default {
 		// SottoMenu
 		.sottomenu {
 			position: absolute;
-			top: 50%;
-			left: -200%;
+			top: 100%;
+			left: 35%;
 			box-shadow: 5px 10px 10px gray;
 			display: flex;
 			gap: 60px;
 			padding: 50px 20px;
+			background-color: white;
 
 			// Elementi del sottoMenu
 			.sottoMenuElement {
@@ -459,6 +467,8 @@ export default {
 
 	// Menu Docs
 	.menuElementDocs {
+		display: flex;
+		align-items: center;
 		// Landing Title
 		.title {
 			font-size: 1.5rem;
@@ -488,9 +498,10 @@ export default {
 		// SottoMenu
 		.contSottoMenu {
 			position: absolute;
-			top: 50%;
+			top: 100%;
 			box-shadow: 5px 10px 10px gray;
 			padding: 40px 10px 10px 10px;
+			background-color: white;
 
 			// Elementi del sottoMenu
 			.sottoMenuElement {

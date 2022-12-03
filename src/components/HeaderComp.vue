@@ -6,7 +6,7 @@
 				<img src="../assets/img/logo-dark.png" alt="Logo" />
 			</div>
 
-			<!-- NavBar -->
+			<!-- NavBar Menu-->
 			<dir class="contNav">
 				<NavBarComp
 					:propsArrayLanding="propsArrayLanding"
@@ -57,25 +57,24 @@ export default {
 
 <style lang="scss" scoped>
 #contHeader {
-	width: 90%;
+	width: 80%;
 	height: 5vh;
 	margin: auto;
-	padding: 30px 0px;
+	padding-top: 30px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	position: relative;
 
+	.contNav {
+		height: 100%;
+	}
+	// Logo
 	.contLogo {
 		height: 100%;
-	}
-
-	.contNav,
-	.contAcces {
-		height: 100%;
-		display: flex;
-	}
-	img {
-		height: 100%;
+		img {
+			height: 100%;
+		}
 	}
 }
 </style>

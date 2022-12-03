@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+		<!-- Header COmp -->
 		<HeaderComp
 			:propsArrayLanding="arrayLanding"
 			:propsArrayPages="arrayPages"
@@ -7,15 +8,21 @@
 			:propsArrayComponents="arrayComponents"
 			:propsArrayDocs="arrayDocs"
 		/>
+
+		<!-- Main Comp -->
+		<MainComp />
 	</div>
 </template>
 
 <script>
 import HeaderComp from "./components/HeaderComp.vue";
+import MainComp from "./components/MainComp.vue";
+
 export default {
 	name: "App",
 	components: {
 		HeaderComp,
+		MainComp,
 	},
 	data() {
 		return {
