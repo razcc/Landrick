@@ -65,7 +65,10 @@ export default {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 
 	.contNav {
 		height: 100%;

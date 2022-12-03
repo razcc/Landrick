@@ -266,16 +266,16 @@ export default {
 			position: absolute;
 			top: 100%;
 			left: 25%;
-			gap: 80px;
+			gap: 50px;
 			display: flex;
 			justify-content: center;
 			box-shadow: 5px 10px 10px gray;
-			padding: 40px 20px;
+			padding: 40px 10px;
 			background-color: white;
 
 			// Elementi del sottoMenu
 			.sottoMenuElement {
-				margin-bottom: 15px;
+				margin-bottom: 10px;
 				font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
 					sans-serif;
 				cursor: pointer;
@@ -324,11 +324,10 @@ export default {
 		.contSottoMenu {
 			position: absolute;
 			top: 100%;
-			gap: 20px;
 			display: flex;
 			flex-direction: column;
 			box-shadow: 5px 10px 10px gray;
-			padding: 50px 30px;
+			padding: 20px 20px;
 			background-color: white;
 
 			// Elementi del sottoMenu
@@ -395,7 +394,7 @@ export default {
 
 			.demoElement {
 				width: calc(100% / 5);
-				margin-bottom: 60px;
+				margin-bottom: 50px;
 				transition: all 0.7s;
 
 				&:hover {
@@ -443,8 +442,8 @@ export default {
 			left: 35%;
 			box-shadow: 5px 10px 10px gray;
 			display: flex;
-			gap: 60px;
-			padding: 50px 20px;
+			gap: 50px;
+			padding: 30px 10px;
 			background-color: white;
 
 			// Elementi del sottoMenu
@@ -500,7 +499,7 @@ export default {
 			position: absolute;
 			top: 100%;
 			box-shadow: 5px 10px 10px gray;
-			padding: 40px 10px 10px 10px;
+			padding: 20px 10px 10px 10px;
 			background-color: white;
 
 			// Elementi del sottoMenu
