@@ -220,7 +220,7 @@ export default {
 	.menuElementHome {
 		display: flex;
 		align-items: center;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
 		font-weight: bold;
@@ -237,7 +237,7 @@ export default {
 		align-items: center;
 		// Landing Title
 		.landingTitle {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 				sans-serif;
 			font-weight: bold;
@@ -297,7 +297,7 @@ export default {
 		align-items: center;
 		// Titolo Pages
 		.pagesTitle {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 				sans-serif;
 			font-weight: bold;
@@ -354,7 +354,7 @@ export default {
 		align-items: center;
 		// Titolo Pages
 		.pagesTitle {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 				sans-serif;
 			font-weight: bold;
@@ -412,7 +412,7 @@ export default {
 		align-items: center;
 		// Titolo Pages
 		.pagesTitle {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 				sans-serif;
 			font-weight: bold;
@@ -471,7 +471,7 @@ export default {
 		align-items: center;
 		// Landing Title
 		.title {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 				sans-serif;
 			font-weight: bold;

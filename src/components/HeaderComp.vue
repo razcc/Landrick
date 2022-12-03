@@ -61,6 +61,7 @@ export default {
 	height: 5vh;
 	margin: auto;
 	padding-top: 30px;
+	margin-bottom: 20px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
