@@ -67,7 +67,13 @@ export default {
 	top: 0;
 	left: 0;
 	right: 0;
-	background-color: white;
+	background: rgb(207, 212, 221);
+	background: linear-gradient(
+		0deg,
+		rgb(255, 255, 255) 0%,
+		rgba(203, 210, 224, 0.719) 50%,
+		rgb(255, 255, 255) 100%
+	);
 
 	.contNav {
 		height: 100%;
