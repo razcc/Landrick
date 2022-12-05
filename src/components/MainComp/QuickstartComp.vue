@@ -20,10 +20,10 @@
 						<div
 							v-for="(elem, index) in arrQuickStart"
 							:key="index"
-							@click="comandoInstallazione(elem.name, index)"
+							@click="quickstartFunction(elem.name, index)"
 							:class="{ activeElement: elem.active }"
 						>
-							<span>{{ elem.name }}</span>
+							<span>{{ elem.name | toLoweCase() }}</span>
 						</div>
 					</div>
 
@@ -65,35 +65,37 @@ export default {
 		return {
 			arrQuickStart: [
 				{
-					name: "npm",
-					link: "#",
-					active: true,
-				},
-				{
-					name: "nuget",
+					name: "Npm",
 					link: "#",
 					active: false,
 				},
 				{
-					name: "spm",
+					name: "Nuget",
 					link: "#",
 					active: false,
 				},
 				{
-					name: "github",
+					name: "Spm",
+					link: "#",
+					active: false,
+				},
+				{
+					name: "Github",
 					link: "#",
 					active: false,
 				},
 			],
+
 			installCommand: "",
 			npmIstall: "$ npm install -g claps.js",
 			nugetInstall: "coming soon ...",
 			spmInstall: "coming soon ...",
 			githubInstall: "coming soon ...",
+			varLowerCase: "",
 		};
 	},
 	methods: {
-		comandoInstallazione(name, index) {
+		quickstartFunction(name, index) {
 			if (name == "npm") {
 				this.installCommand = this.npmIstall;
 			} else if (name == "nuget") {
@@ -110,6 +112,12 @@ export default {
 			this.arrQuickStart[index].active =
 				!this.arrQuickStart[index].active;
 		},
+	},
+	mounted() {
+		this.arrQuickStart[0].active = true;
+		this.arrQuickStart.forEach((element) => {
+			element.name = element.name.toLowerCase();
+		});
 	},
 };
 </script>

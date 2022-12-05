@@ -30,13 +30,17 @@
 
 		<!-- Quickstrt Comp -->
 		<QuickstartComp />
+
+		<!-- Info Comp -->
+		<InfoComp />
 	</main>
 </template>
 
 <script>
-import IntroComp from "./MainComp/IntroComp.vue";
-import FeaturesComp from "./MainComp/FeaturesComp.vue";
-import QuickstartComp from "./MainComp/QuickstartComp.vue";
+import IntroComp from "./IntroComp.vue";
+import FeaturesComp from "./FeaturesComp.vue";
+import QuickstartComp from "./QuickstartComp.vue";
+import InfoComp from "./InfoComp.vue";
 
 export default {
 	name: "MainComp",
@@ -44,6 +48,7 @@ export default {
 		IntroComp,
 		FeaturesComp,
 		QuickstartComp,
+		InfoComp,
 	},
 	props: {
 		propsArrayCLientiFidati: Array,

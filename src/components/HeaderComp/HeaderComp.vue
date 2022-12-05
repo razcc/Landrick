@@ -2,7 +2,7 @@
 	<header id="contHeader">
 		<!-- Logo -->
 		<div class="contLogo">
-			<img src="../assets/img/logo-dark.png" alt="Logo" />
+			<img src="../../assets/img/logo-dark.png" alt="Logo" />
 		</div>
 
 		<!-- NavBar Menu-->
@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import NavBarComp from "./HeaderComp/NavBarComp.vue";
-import AccessOption from "./HeaderComp/AccessOption.vue";
+import NavBarComp from "./NavBarComp.vue";
+import AccessOption from "./AccessOption.vue";
 
 export default {
 	name: "HeaderComp",

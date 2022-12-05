@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import HeaderComp from "./components/HeaderComp.vue";
-import MainComp from "./components/MainComp.vue";
+import HeaderComp from "./components/HeaderComp/HeaderComp.vue";
+import MainComp from "./components/MainComp/MainComp.vue";
 
 export default {
 	name: "App",
