@@ -32,12 +32,12 @@
 			</div>
 
 			<!-- Bottone Read More -->
-			<Button
-				>Read more
-				<span
-					><font-awesome-icon
-						icon="fa-solid fa-arrow-right-long" /></span
-			></Button>
+			<button class="btnReadMore">
+				<span class="btnText">Read More</span>
+				<span class="btnArrow">
+					<font-awesome-icon icon="fa-solid fa-arrow-right-long" />
+				</span>
+			</button>
 		</div>
 
 		<!-- Col Right -->
@@ -95,22 +95,44 @@ export default {
 			}
 		}
 
-		Button {
-			background-color: rgba(47, 85, 212, 1);
-			border: none;
-			border-radius: 7px;
-			font-size: 1.1rem;
-			font-weight: bold;
-			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-				sans-serif;
-			color: white;
-			padding: 10px 15px;
+		// Button
+		.btnReadMore {
+			border-radius: 5px;
+			padding: 10px 25px;
 			margin-top: 20px;
+			font-weight: bold;
+			border: none;
+			background: rgba(47, 85, 212, 1);
+			color: white;
+			cursor: pointer;
+			position: relative;
+			transition: all 0.5s ease;
+			z-index: 1;
+		}
 
-			.fa-arrow-right-long {
-				margin-left: 10px;
-				font-size: 0.8rem;
-			}
+		.btnReadMore:after {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 0;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			border-radius: 5px;
+			background-color: rgba(15, 113, 115, 1);
+			transition: all 0.5s;
+		}
+		.btnReadMore:hover {
+			color: black;
+			box-shadow: 4px 8px 15px gray;
+		}
+		.btnReadMore:hover:after {
+			top: auto;
+			bottom: 0;
+			height: 100%;
+		}
+		.btnReadMore:active {
+			top: 2px;
 		}
 	}
 
