@@ -15,37 +15,27 @@
 			<!-- Table -->
 			<div class="quickstartTable">
 				<!-- Container riga -->
-				<div class="row">
-					<!-- NPM -->
-					<div>
-						<span>npm</span>
+				<div>
+					<div class="row">
+						<div
+							v-for="(elem, index) in arrQuickStart"
+							:key="index"
+							@click="comandoInstallazione(elem.name, index)"
+							:class="{ activeElement: elem.active }"
+						>
+							<span>{{ elem.name }}</span>
+						</div>
 					</div>
 
-					<!-- NUGET -->
-					<div>
-						<span>nuget</span>
+					<!-- Comando PROMPT -->
+					<div class="comandoPrompt">
+						<span v-if="installCommand == ''">
+							{{ npmIstall }}
+						</span>
+						<span else>
+							<span> {{ installCommand }} </span>
+						</span>
 					</div>
-
-					<!-- SPM -->
-					<div>
-						<span>spm</span>
-					</div>
-
-					<!-- GITHUB -->
-					<div>
-						<span>github</span>
-					</div>
-				</div>
-
-				<!-- Comando PROMPT -->
-				<div class="comandoPrompt">
-					<span>
-						<span class="-g-dollaro">$</span>
-
-						npm install
-						<span class="-g-dollaro"> -g </span>
-						clapes.js
-					</span>
 				</div>
 			</div>
 
@@ -71,10 +61,63 @@
 <script>
 export default {
 	name: "QuickstartComp",
+	data() {
+		return {
+			arrQuickStart: [
+				{
+					name: "npm",
+					link: "#",
+					active: true,
+				},
+				{
+					name: "nuget",
+					link: "#",
+					active: false,
+				},
+				{
+					name: "spm",
+					link: "#",
+					active: false,
+				},
+				{
+					name: "github",
+					link: "#",
+					active: false,
+				},
+			],
+			installCommand: "",
+			npmIstall: "$ npm install -g claps.js",
+			nugetInstall: "coming soon ...",
+			spmInstall: "coming soon ...",
+			githubInstall: "coming soon ...",
+		};
+	},
+	methods: {
+		comandoInstallazione(name, index) {
+			if (name == "npm") {
+				this.installCommand = this.npmIstall;
+			} else if (name == "nuget") {
+				this.installCommand = this.nugetInstall;
+			} else if (name == "spm") {
+				this.installCommand = this.spmInstall;
+			} else if (name == "github") {
+				this.installCommand = this.githubInstall;
+			}
+
+			this.arrQuickStart.forEach((element) => {
+				element.active = false;
+			});
+			this.arrQuickStart[index].active =
+				!this.arrQuickStart[index].active;
+		},
+	},
 };
 </script>
 
 <style lang="scss" scoped>
+.activeElement {
+	background-color: white;
+}
 .container {
 	width: 40%;
 	margin: auto;
@@ -105,7 +148,7 @@ export default {
 	// Table QuickStart
 	.quickstartTable {
 		background-color: rgba(60, 72, 88, 1);
-		border-radius: 10px;
+		border-radius: 7px;
 		padding: 20px 20px 30px 20px;
 
 		// Riga elementi
@@ -113,8 +156,8 @@ export default {
 			display: flex;
 			justify-content: space-around;
 			background-color: rgba(79, 90, 105, 1);
-			padding: 4px;
-			border-radius: 10px;
+			padding: 7px;
+			border-radius: 5px;
 			margin-bottom: 20px;
 			// SIngolo Elemento
 			div {
@@ -125,7 +168,6 @@ export default {
 				transition: all 0.6s;
 
 				&:hover {
-					background-color: rgba(60, 72, 88, 1);
 					cursor: pointer;
 				}
 			}
@@ -134,12 +176,8 @@ export default {
 		// Comando Propt
 		.comandoPrompt {
 			text-align: start;
-			color: rgba(132, 146, 166, 1);
-
-			.-g-dollaro {
-				color: rgba(46, 201, 139, 1);
-				font-weight: bold;
-			}
+			color: rgb(128, 162, 209);
+			font-size: 1.1rem;
 		}
 	}
 

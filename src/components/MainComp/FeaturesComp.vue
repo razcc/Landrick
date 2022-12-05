@@ -14,23 +14,29 @@
 
 			<!-- Container 4 Features -->
 			<div class="contFeatures">
+				<!-- Card ciclo  -->
 				<div
 					class="singleFeatures"
 					v-for="(elem, index) in arKeyFeatures"
 					:key="index"
 				>
+					<!-- Immagine card -->
 					<div class="contImmage">
 						<img :src="getImgUrl(elem.image)" alt="features" />
 					</div>
+
+					<!-- Testo card -->
 					<div>
+						<!-- Titolo -->
 						<h3 class="titleSingleCard">
 							{{ elem.name }}
 						</h3>
+						<!-- Paragrafo -->
 						<p class="paragraphSingleCard">
-							Composed in a pseudo-Latin language whitch more or
-							less corresponds.
+							{{ elem.text }}
 						</p>
 
+						<!-- Read More -->
 						<div class="readMoreCard">
 							<span>Read More</span>
 							<font-awesome-icon
@@ -53,18 +59,22 @@ export default {
 				{
 					name: "Modular",
 					image: "modular.svg",
+					text: " Composed in a pseudo-Latin language whitch more or less corresponds",
 				},
 				{
 					name: "Responsive",
 					image: "responsive.svg",
+					text: " Composed in a pseudo-Latin language whitch more or less corresponds",
 				},
 				{
 					name: "Customizable",
 					image: "custom.svg",
+					text: " Composed in a pseudo-Latin language whitch more or less corresponds",
 				},
 				{
 					name: "Scalable",
 					image: "scalable.svg",
+					text: " Composed in a pseudo-Latin language whitch more or less corresponds",
 				},
 			],
 		};
