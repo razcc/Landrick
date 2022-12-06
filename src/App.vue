@@ -29,6 +29,7 @@
 			:propsArrayDemos="arrayDemos"
 			:propsArrayComponents="arrayComponents"
 			:propsArrayDocs="arrayDocs"
+			:mode="mode"
 		/>
 
 		<!-- Main Comp -->
@@ -55,7 +56,6 @@ export default {
 		return {
 			// theme
 			varTheme: false,
-			varThemeText: false,
 			mode: "light",
 			// Array NAVBAR
 			arrayLanding: [
@@ -265,6 +265,12 @@ export default {
 * {
 	padding: 0;
 	margin: 0;
+}
+.app {
+	background: white;
+}
+.dark {
+	background: rgba(28, 40, 54, 1);
 }
 
 // Mixin Proprieta del BOX tema

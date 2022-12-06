@@ -2,7 +2,14 @@
 	<header id="contHeader">
 		<!-- Logo -->
 		<div class="contLogo">
-			<img src="../../assets/img/logo-dark.png" alt="Logo" />
+			<!-- Logo Scuro -->
+			<img
+				v-if="mode == 'light'"
+				src="../../assets/img/logo-dark.png"
+				alt="Logo"
+			/>
+			<!-- Logo Bianco -->
+			<img src="../../assets/img/logo-light.png" alt="Logo" />
 		</div>
 
 		<!-- NavBar Menu-->
@@ -39,6 +46,7 @@ export default {
 		propsArrayDemos: Array,
 		propsArrayComponents: Array,
 		propsArrayDocs: Array,
+		mode: String,
 	},
 	data() {
 		return {
@@ -57,7 +65,6 @@ export default {
 #contHeader {
 	height: 5vh;
 	width: 100%;
-	margin: auto;
 	padding: 20px 10px;
 	margin-bottom: 20px;
 	display: flex;
@@ -68,24 +75,21 @@ export default {
 	left: 0;
 	right: 0;
 	z-index: 1;
-	background: rgb(207, 212, 221);
-	background: linear-gradient(
-		0deg,
-		rgb(255, 255, 255) 0%,
-		rgb(179, 193, 221) 30%,
-		rgb(179, 193, 221) 50%,
-		rgb(179, 193, 221) 100%
-	);
-
-	.contNav {
+	background: white;
+	border-bottom: 1px solid white;
+}
+.dark #contHeader {
+	background: rgba(28, 40, 54, 1);
+	border-bottom: 1px solid rgb(32, 52, 75);
+}
+.contNav {
+	height: 100%;
+}
+// Logo
+.contLogo {
+	height: 100%;
+	img {
 		height: 100%;
-	}
-	// Logo
-	.contLogo {
-		height: 100%;
-		img {
-			height: 100%;
-		}
 	}
 }
 </style>
