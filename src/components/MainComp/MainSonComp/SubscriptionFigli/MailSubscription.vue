@@ -31,7 +31,7 @@ export default {
 #mailSubscriptionComp {
 	width: 40%;
 	text-align: center;
-	margin-bottom: 5%;
+	margin-bottom: 10%;
 
 	// Cont titolo
 	.titleCont {

@@ -11,18 +11,23 @@
 
 		<!-- Main Comp -->
 		<MainComp :propsArrayCLientiFidati="arrayCLientiFidati" />
+
+		<!-- Footer Comp -->
+		<FooterComp />
 	</div>
 </template>
 
 <script>
 import HeaderComp from "./components/HeaderComp/HeaderComp.vue";
 import MainComp from "./components/MainComp/MainComp.vue";
+import FooterComp from "./components/FooterComp/FooterComp.vue";
 
 export default {
 	name: "App",
 	components: {
 		HeaderComp,
 		MainComp,
+		FooterComp,
 	},
 	data() {
 		return {

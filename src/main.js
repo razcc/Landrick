@@ -11,10 +11,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faUserSecret, faMagnifyingGlass, faUser, faBarsStaggered, faChevronDown, faChevronUp, faChevronRight, faSun, faCheck, faArrowRightLong, faX } from '@fortawesome/free-solid-svg-icons'
 
 // Icone Brands
-import { faGithub as faGithubBrands } from '@fortawesome/free-brands-svg-icons'
+import { faGithub as faGithubBrands, faFacebookF as faFacebookFBrands, faInstagram as faInstagramBrands, faTwitter as faTwitterBrands, faLinkedinIn as faLinkedinInBrands } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret, faMagnifyingGlass, faUser, faBarsStaggered, faGithubBrands, faChevronDown, faChevronUp, faChevronRight, faSun, faCheck, faArrowRightLong, faX)
+library.add(faUserSecret, faMagnifyingGlass, faUser, faBarsStaggered, faGithubBrands, faChevronDown, faChevronUp, faChevronRight, faSun, faCheck, faArrowRightLong, faX, faFacebookFBrands, faInstagramBrands, faTwitterBrands, faLinkedinInBrands)
 
 /* add font awesome icon component */
 Vue.component('font-awesome-icon', FontAwesomeIcon)
