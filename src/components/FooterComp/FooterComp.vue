@@ -38,12 +38,19 @@
 				<!-- Container input -->
 				<div class="inputCont">
 					<div>
-						<span
-							>Write youre email
-							<span class="asterisco">*</span></span
-						>
+						<span>
+							Write youre email
+							<span class="asterisco">*</span>
+						</span>
 					</div>
-					<input type="email" placeholder="Your email:" />
+
+					<!-- Input -->
+					<div class="input">
+						<font-awesome-icon icon="fa-regular fa-envelope" />
+						<input type="email" placeholder="Your email:" />
+					</div>
+
+					<!-- Bottone  -->
 					<div class="btn">Subscribe</div>
 				</div>
 			</div>
@@ -158,16 +165,32 @@ footer {
 				color: red;
 			}
 
-			input {
+			// Input
+			.input {
 				width: 100%;
 				border: none;
 				background-color: rgba(39, 49, 79, 1);
-				padding: 10px;
+				padding: 0px;
 				border-radius: 7px;
 				margin-top: 10px;
 				margin-bottom: 20px;
+				display: flex;
+				align-items: center;
+				padding-left: 10px;
+				input {
+					background-color: transparent;
+					border: none;
+					width: 100%;
+					padding: 10px;
+					outline: none;
+					color: white;
+				}
+				.fa-envelope {
+					font-size: 1.1rem;
+				}
 			}
 
+			// Bottone
 			.btn {
 				width: 100%;
 				background-color: rgba(34, 46, 81, 1);
@@ -178,6 +201,12 @@ footer {
 				border-radius: 10px;
 				cursor: pointer;
 				box-shadow: 2px 5px 5px rgba(33, 33, 243, 0.205);
+				transition: all 0.5s;
+
+				&:hover {
+					color: white;
+					background-color: blue;
+				}
 			}
 		}
 	}
