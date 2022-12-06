@@ -230,6 +230,7 @@ export default {
 			background-color: rgba(241, 116, 37, 1);
 			color: white;
 			font-weight: bold;
+			letter-spacing: 1px;
 			text-align: center;
 			padding: 5px;
 		}

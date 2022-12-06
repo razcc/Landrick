@@ -12,20 +12,25 @@
 			</p>
 		</div>
 
+		<!-- Card Section -->
 		<div class="cardCont">
-			<!-- Card Section -->
 			<CardComp />
 		</div>
+
+		<!-- Email SubScription -->
+		<MailSubscription />
 	</div>
 </template>
 
 <script>
 import CardComp from "./SubscriptionFigli/CardComp.vue";
+import MailSubscription from "./SubscriptionFigli/MailSubscription.vue";
 
 export default {
 	name: "SubscriptionComp",
 	components: {
 		CardComp,
+		MailSubscription,
 	},
 	data() {
 		return {};

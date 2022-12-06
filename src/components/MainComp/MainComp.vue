@@ -36,18 +36,6 @@
 
 		<!-- Subscription Comp -->
 		<SubscriptionComp />
-
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime ullam
-		in vero voluptatem accusantium, debitis modi cumque voluptatibus
-		recusandae ut nostrum ea itaque perferendis repellat atque
-		necessitatibus numquam quae inventore. lore Lorem ipsum dolor sit amet
-		consectetur adipisicing elit. Beatae quam, cumque excepturi repellendus
-		deserunt porro culpa error cum aperiam numquam illo exercitationem?
-		Cupiditate doloribus, deleniti rerum omnis vero aspernatur tempora?
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, id
-		exercitationem? Tempore perspiciatis eveniet repellat dolores tempora
-		laborum porro, incidunt non? Esse recusandae quisquam dolorum modi,
-		doloribus asperiores enim cum?
 	</main>
 </template>
 
