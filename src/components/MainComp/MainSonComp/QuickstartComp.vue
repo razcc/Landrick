@@ -23,7 +23,7 @@
 							@click="quickstartFunction(elem.name, index)"
 							:class="{ activeElement: elem.active }"
 						>
-							<span>{{ elem.name | toLoweCase() }}</span>
+							<span>{{ elem.name }}</span>
 						</div>
 					</div>
 
