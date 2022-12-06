@@ -1,5 +1,27 @@
 <template>
-	<div id="app">
+	<div class="app" :class="mode">
+		<!-- Bottono Fixed Dark Light -->
+		<div class="themeContainer">
+			<!-- Theme Option -->
+			<div
+				:class="varTheme ? 'opened themeOption' : 'closed themeOption'"
+			>
+				<div class="themeTitle">Theme Option</div>
+				<div class="themeLight" @click="lightModeFunction()">Light</div>
+				<div class="themeDark" @click="darkmodeFunction()">Dark</div>
+			</div>
+
+			<!-- Icon sole -->
+			<div
+				:class="varTheme ? 'sunOpen sunCont' : 'sunClosed sunCont'"
+				@click="openTheme()"
+			>
+				<div class="sun">
+					<font-awesome-icon class="" icon="fa-solid fa-sun" />
+				</div>
+			</div>
+		</div>
+
 		<!-- Header COmp -->
 		<HeaderComp
 			:propsArrayLanding="arrayLanding"
@@ -31,6 +53,10 @@ export default {
 	},
 	data() {
 		return {
+			// theme
+			varTheme: false,
+			varThemeText: false,
+			mode: "light",
 			// Array NAVBAR
 			arrayLanding: [
 				[
@@ -212,12 +238,35 @@ export default {
 			],
 		};
 	},
+	methods: {
+		openTheme() {
+			if (!this.varTheme) {
+				this.varTheme = true;
+			} else {
+				this.varTheme = false;
+			}
+			setTimeout(() => {
+				this.varThemeText = true;
+			}, 500);
+		},
+		lightModeFunction() {
+			this.mode = "light";
+		},
+		darkmodeFunction() {
+			this.mode = "dark";
+		},
+	},
 };
 </script>
 
 <style lang="scss">
+@import "./Mixins/mixinThemeBOX.scss";
+// General
 * {
 	padding: 0;
 	margin: 0;
 }
+
+// Mixin Proprieta del BOX tema
+@include themeBox;
 </style>
