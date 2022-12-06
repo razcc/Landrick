@@ -29,7 +29,7 @@
 
 			<!-- Col right -->
 			<div class="colRight">
-				<img src="../../assets/img/about.png" alt="About Us" />
+				<img src="../../../assets/img/about.png" alt="About Us" />
 			</div>
 		</div>
 

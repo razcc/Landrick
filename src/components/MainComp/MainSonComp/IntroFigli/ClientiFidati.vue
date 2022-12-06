@@ -22,7 +22,7 @@ export default {
 	methods: {
 		// Path image Clienti
 		getImgUrl(elem) {
-			return require("../../../assets/img/" + elem);
+			return require("../../../../assets/img/" + elem);
 		},
 	},
 };

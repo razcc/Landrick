@@ -42,7 +42,7 @@
 
 		<!-- Col Right -->
 		<div class="colRight">
-			<img src="../../assets/img//1.png" alt="" />
+			<img src="../../../assets/img/1.png" alt="" />
 		</div>
 	</div>
 </template>

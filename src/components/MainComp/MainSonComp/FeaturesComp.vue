@@ -82,7 +82,7 @@ export default {
 	methods: {
 		// Url image Features
 		getImgUrl(elem) {
-			return require("../../assets/img/" + elem);
+			return require("../../../assets/img/" + elem);
 		},
 	},
 };

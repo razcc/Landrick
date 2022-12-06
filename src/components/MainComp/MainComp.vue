@@ -37,10 +37,10 @@
 </template>
 
 <script>
-import IntroComp from "./IntroComp.vue";
-import FeaturesComp from "./FeaturesComp.vue";
-import QuickstartComp from "./QuickstartComp.vue";
-import InfoComp from "./InfoComp.vue";
+import IntroComp from "./MainSonComp/IntroComp.vue";
+import FeaturesComp from "./MainSonComp/FeaturesComp.vue";
+import QuickstartComp from "./MainSonComp/QuickstartComp.vue";
+import InfoComp from "./MainSonComp/InfoComp.vue";
 
 export default {
 	name: "MainComp",
