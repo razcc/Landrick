@@ -9,7 +9,7 @@
 				alt="Logo"
 			/>
 			<!-- Logo Bianco -->
-			<img src="../../assets/img/logo-light.png" alt="Logo" />
+			<img else src="../../assets/img/logo-light.png" alt="Logo" />
 		</div>
 
 		<!-- NavBar Menu-->
@@ -25,7 +25,7 @@
 
 		<!-- Acesso Componente -->
 		<div class="contAcces">
-			<AccessOption />
+			<AccessOption :mode="mode" />
 		</div>
 	</header>
 </template>
@@ -89,7 +89,7 @@ export default {
 .contLogo {
 	height: 100%;
 	img {
-		height: 100%;
+		height: 70%;
 	}
 }
 </style>
