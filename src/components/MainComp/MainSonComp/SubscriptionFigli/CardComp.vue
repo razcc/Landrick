@@ -3,9 +3,17 @@
 		<!-- Single Card -->
 		<div
 			class="card"
-			v-for="(elem, index) in propsSubscriptionInfo"
+			@mouseenter="hoverIn(index)"
+			:class="{ hoverEffect: elem.hover }"
+			@mouseleave="hoverOut(index)"
+			v-for="(elem, index) in subscriptionInfo"
 			:key="index"
 		>
+			<!-- Beast Deal Element -->
+			<div v-if="elem.bestDeal" class="bestDeal">
+				<span>Beast</span>
+			</div>
+
 			<!-- Tipo Abbonamento -->
 			<div class="typeCont">
 				<div class="type">
@@ -62,8 +70,132 @@
 <script>
 export default {
 	name: "CardComp",
-	props: {
-		propsSubscriptionInfo: Array,
+	props: {},
+	data() {
+		return {
+			subscriptionInfo: [
+				{
+					subscriptions: "Basic",
+					cost: "$9.00",
+					payment: "Per Month",
+					description:
+						"All the basics for business that are just getting started.",
+					arrFunctionality: [
+						{
+							name: "Full Access",
+							state: true,
+						},
+						{
+							name: "Enhanced Security",
+							state: true,
+						},
+						{
+							name: "Spurce FIles",
+							state: true,
+						},
+						{
+							name: "1 Domain Free",
+							state: true,
+						},
+						{
+							name: "Enhanced Security",
+							state: true,
+						},
+					],
+					hover: false,
+					bestDeal: false,
+				},
+				{
+					subscriptions: "Business",
+					cost: "$39.00",
+					payment: "Per Month",
+					description:
+						"Better for growing business that want more customers.",
+					arrFunctionality: [
+						{
+							name: "Full Access",
+							state: true,
+						},
+						{
+							name: "Enhanced Security",
+							state: true,
+						},
+						{
+							name: "Spurce FIles",
+							state: true,
+						},
+						{
+							name: "1 Domain Free",
+							state: true,
+						},
+						{
+							name: "Enhanced Security",
+							state: true,
+						},
+					],
+					hover: false,
+					bestDeal: true,
+				},
+				{
+					subscriptions: "Enterprise",
+					cost: "$79.00",
+					payment: "Per Month",
+					description:
+						"Advanced features for pros who need more customization.",
+					arrFunctionality: [
+						{
+							name: "Full Access",
+							state: true,
+						},
+						{
+							name: "Enhanced Security",
+							state: true,
+						},
+						{
+							name: "Spurce FIles",
+							state: true,
+						},
+						{
+							name: "1 Domain Free",
+							state: true,
+						},
+						{
+							name: "Enhanced Security",
+							state: true,
+						},
+					],
+					hover: false,
+					bestDeal: false,
+				},
+			],
+		};
+	},
+	methods: {
+		hoverIn(index) {
+			console.log(index);
+			this.subscriptionInfo.forEach((elem) => {
+				elem.hover = false;
+			});
+			this.subscriptionInfo[index].hover = true;
+			console.log(this.subscriptionInfo[index].hover);
+		},
+		hoverOut(index) {
+			this.subscriptionInfo[index].hover = false;
+			console.log(this.subscriptionInfo[index].hover);
+
+			this.subscriptionInfo.forEach((elem) => {
+				if (elem.bestDeal) {
+					elem.hover = true;
+				}
+			});
+		},
+	},
+	mounted() {
+		this.subscriptionInfo.forEach((elem) => {
+			if (elem.bestDeal) {
+				elem.hover = true;
+			}
+		});
 	},
 };
 </script>
@@ -73,6 +205,7 @@ export default {
 	display: flex;
 	justify-content: space-between;
 	gap: 50px;
+	margin-top: 50px;
 	.card {
 		display: flex;
 		flex-direction: column;
@@ -81,7 +214,25 @@ export default {
 		padding: 20px;
 		border: 1px solid rgba(145, 143, 143, 0.562);
 		border-radius: 15px;
-		box-shadow: 2px 10px 7px grey;
+		box-shadow: 1px 8px 7px gray;
+		transition: all 1s;
+
+		position: relative;
+		overflow: hidden;
+
+		//  Beast Deal Element
+		.bestDeal {
+			position: absolute;
+			right: -10%;
+			top: 20px;
+			width: 40%;
+			transform: rotate(45deg);
+			background-color: rgba(241, 116, 37, 1);
+			color: white;
+			font-weight: bold;
+			text-align: center;
+			padding: 5px;
+		}
 
 		// Nome Abbonamento
 		.type {
@@ -162,5 +313,11 @@ export default {
 				sans-serif;
 		}
 	}
+}
+
+// EfettiHover Card
+.hoverEffect {
+	transform: scale(1.05) translateY(-15px);
+	box-shadow: 1px 8px 7px blue !important;
 }
 </style>

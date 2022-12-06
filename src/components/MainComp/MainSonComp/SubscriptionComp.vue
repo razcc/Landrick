@@ -14,7 +14,7 @@
 
 		<div class="cardCont">
 			<!-- Card Section -->
-			<CardComp :propsSubscriptionInfo="subscriptionInfo" />
+			<CardComp />
 		</div>
 	</div>
 </template>
@@ -28,97 +28,7 @@ export default {
 		CardComp,
 	},
 	data() {
-		return {
-			subscriptionInfo: [
-				{
-					subscriptions: "Basic",
-					cost: "$9.00",
-					payment: "Per Month",
-					description:
-						"All the basics for business that are just getting started.",
-					arrFunctionality: [
-						{
-							name: "Full Access",
-							state: true,
-						},
-						{
-							name: "Enhanced Security",
-							state: true,
-						},
-						{
-							name: "Spurce FIles",
-							state: true,
-						},
-						{
-							name: "1 Domain Free",
-							state: true,
-						},
-						{
-							name: "Enhanced Security",
-							state: true,
-						},
-					],
-				},
-				{
-					subscriptions: "Business",
-					cost: "$39.00",
-					payment: "Per Month",
-					description:
-						"Better for growing business that want more customers.",
-					arrFunctionality: [
-						{
-							name: "Full Access",
-							state: true,
-						},
-						{
-							name: "Enhanced Security",
-							state: true,
-						},
-						{
-							name: "Spurce FIles",
-							state: true,
-						},
-						{
-							name: "1 Domain Free",
-							state: true,
-						},
-						{
-							name: "Enhanced Security",
-							state: true,
-						},
-					],
-				},
-				{
-					subscriptions: "Enterprise",
-					cost: "$79.00",
-					payment: "Per Month",
-					description:
-						"Advanced features for pros who need more customization.",
-					arrFunctionality: [
-						{
-							name: "Full Access",
-							state: true,
-						},
-						{
-							name: "Enhanced Security",
-							state: true,
-						},
-						{
-							name: "Spurce FIles",
-							state: true,
-						},
-						{
-							name: "1 Domain Free",
-							state: true,
-						},
-						{
-							name: "Enhanced Security",
-							state: true,
-						},
-					],
-				},
-			],
-		};
+		return {};
 	},
 };
 </script>
