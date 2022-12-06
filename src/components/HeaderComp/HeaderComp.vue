@@ -1,5 +1,5 @@
 <template>
-	<header id="contHeader">
+	<header>
 		<!-- Logo -->
 		<div class="contLogo">
 			<!-- Logo Scuro -->
@@ -20,6 +20,7 @@
 				:propsArrayDemos="propsArrayDemos"
 				:propsArrayComponents="propsArrayComponents"
 				:propsArrayDocs="propsArrayDocs"
+				:mode="mode"
 			/>
 		</dir>
 
@@ -62,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#contHeader {
+header {
 	height: 5vh;
 	width: 100%;
 	padding: 20px 10px;
@@ -78,18 +79,23 @@ export default {
 	background: white;
 	border-bottom: 1px solid white;
 }
-.dark #contHeader {
+
+// DarkMode Header
+.dark header {
 	background: rgba(28, 40, 54, 1);
 	border-bottom: 1px solid rgb(32, 52, 75);
 }
-.contNav {
-	height: 100%;
-}
+
 // Logo
 .contLogo {
 	height: 100%;
 	img {
 		height: 70%;
 	}
+}
+
+// COntainer Nav Menu
+.contNav {
+	height: 100%;
 }
 </style>

@@ -186,6 +186,7 @@ export default {
 		propsArrayDemos: Array,
 		propsArrayComponents: Array,
 		propsArrayDocs: Array,
+		mode: String,
 	},
 	data() {
 		return {
@@ -212,310 +213,319 @@ export default {
 	height: 100%;
 	text-transform: uppercase;
 	position: relative;
+	color: black;
+}
+// Menu Home
+.menuElementHome {
+	display: flex;
+	align-items: center;
+	font-size: 1.2rem;
+	font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		sans-serif;
+	font-weight: bold;
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		text-decoration-thickness: 3px;
+	}
+}
 
-	// Menu Home
-	.menuElementHome {
-		display: flex;
-		align-items: center;
+// Menu landing
+.menuElementLanding {
+	display: flex;
+	align-items: center;
+	// Landing Title
+	.landingTitle {
 		font-size: 1.2rem;
 		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 			sans-serif;
 		font-weight: bold;
-		&:hover {
-			cursor: pointer;
-			text-decoration: underline;
-			text-decoration-thickness: 3px;
-		}
 	}
 
-	// Menu landing
-	.menuElementLanding {
+	// Freccia Giu
+	.downLanding {
+		margin-left: 5px;
+		font-size: 16px;
+		transition: all 0.5s;
+	}
+
+	// Freccia Su al hover
+	&:hover .downLanding {
+		transform: rotate(180deg);
+	}
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		text-decoration-thickness: 3px;
+	}
+
+	// SottoMenu
+	.contSottoMenu {
+		position: absolute;
+		top: 100%;
+		left: -25%;
+		gap: 50px;
 		display: flex;
-		align-items: center;
-		// Landing Title
-		.landingTitle {
-			font-size: 1.2rem;
-			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		justify-content: center;
+		box-shadow: 5px 10px 10px gray;
+		padding: 40px 10px;
+		background-color: white;
+
+		// Elementi del sottoMenu
+		.sottoMenuElement {
+			margin-bottom: 10px;
+			font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
 				sans-serif;
-			font-weight: bold;
-		}
-
-		// Freccia Giu
-		.downLanding {
-			margin-left: 5px;
-			font-size: 16px;
-			transition: all 0.5s;
-		}
-
-		// Freccia Su al hover
-		&:hover .downLanding {
-			transform: rotate(180deg);
-		}
-
-		&:hover {
 			cursor: pointer;
-			text-decoration: underline;
-			text-decoration-thickness: 3px;
-		}
+			transition: all 1s;
+			padding: 10px;
 
-		// SottoMenu
-		.contSottoMenu {
-			position: absolute;
-			top: 100%;
-			left: -25%;
-			gap: 50px;
-			display: flex;
-			justify-content: center;
-			box-shadow: 5px 10px 10px gray;
-			padding: 40px 10px;
-			background-color: white;
-
-			// Elementi del sottoMenu
-			.sottoMenuElement {
-				margin-bottom: 10px;
-				font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
-					sans-serif;
-				cursor: pointer;
-				transition: all 1s;
-				padding: 10px;
-
-				&:hover {
-					transform: scale(1.1);
-					box-shadow: 5px 5px 10px;
-					color: rgba(137, 136, 136, 1);
-				}
+			&:hover {
+				transform: scale(1.1);
+				box-shadow: 5px 5px 10px;
+				color: rgba(137, 136, 136, 1);
 			}
 		}
 	}
+}
 
-	// Menu Pages
-	.menuElementPages {
+// Menu Pages
+.menuElementPages {
+	display: flex;
+	align-items: center;
+	// Titolo Pages
+	.pagesTitle {
+		font-size: 1.2rem;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: bold;
+	}
+
+	// Freccia Giu
+	.downLanding {
+		margin-left: 5px;
+		font-size: 16px;
+		transition: all 0.5s;
+	}
+
+	// Freccia Su al hover
+	&:hover .downLanding {
+		transform: rotate(180deg);
+	}
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		text-decoration-thickness: 3px;
+	}
+
+	// SottoMenu
+	.contSottoMenu {
+		position: absolute;
+		top: 100%;
 		display: flex;
-		align-items: center;
-		// Titolo Pages
-		.pagesTitle {
-			font-size: 1.2rem;
-			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		flex-direction: column;
+		box-shadow: 5px 10px 10px gray;
+		padding: 20px 20px;
+		background-color: white;
+
+		// Elementi del sottoMenu
+		.sottoMenuElement {
+			margin-bottom: 15px;
+			font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
 				sans-serif;
-			font-weight: bold;
-		}
-
-		// Freccia Giu
-		.downLanding {
-			margin-left: 5px;
-			font-size: 16px;
-			transition: all 0.5s;
-		}
-
-		// Freccia Su al hover
-		&:hover .downLanding {
-			transform: rotate(180deg);
-		}
-		&:hover {
 			cursor: pointer;
-			text-decoration: underline;
-			text-decoration-thickness: 3px;
-		}
-
-		// SottoMenu
-		.contSottoMenu {
-			position: absolute;
-			top: 100%;
-			display: flex;
-			flex-direction: column;
-			box-shadow: 5px 10px 10px gray;
-			padding: 20px 20px;
-			background-color: white;
-
-			// Elementi del sottoMenu
-			.sottoMenuElement {
-				margin-bottom: 15px;
-				font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
-					sans-serif;
-				cursor: pointer;
-				transition: all 1s;
-				padding: 10px;
-				&:hover {
-					transform: scale(1.1);
-					box-shadow: 5px 5px 10px;
-					color: rgba(137, 136, 136, 1);
-				}
+			transition: all 1s;
+			padding: 10px;
+			&:hover {
+				transform: scale(1.1);
+				box-shadow: 5px 5px 10px;
+				color: rgba(137, 136, 136, 1);
 			}
 		}
 	}
+}
 
-	// Menu demos
-	.menuElementDemos {
+// Menu demos
+.menuElementDemos {
+	display: flex;
+	align-items: center;
+	// Titolo Pages
+	.pagesTitle {
+		font-size: 1.2rem;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: bold;
+	}
+
+	// Freccia Giu
+	.downLanding {
+		margin-left: 5px;
+		font-size: 16px;
+		transition: all 0.5s;
+	}
+
+	// Freccia Su al hover
+	&:hover .downLanding {
+		transform: rotate(180deg);
+	}
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		text-decoration-thickness: 3px;
+	}
+
+	// SottoMenu
+	.conSottoMenu {
+		position: absolute;
+		top: 100%;
+		left: -50%;
+		width: 200%;
+		box-shadow: 5px 10px 10px gray;
+		padding-top: 50px;
 		display: flex;
-		align-items: center;
-		// Titolo Pages
-		.pagesTitle {
-			font-size: 1.2rem;
-			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-				sans-serif;
-			font-weight: bold;
+		flex-wrap: wrap;
+		text-align: center;
+		background-color: white;
+		img {
+			margin-bottom: 20px;
 		}
 
-		// Freccia Giu
-		.downLanding {
-			margin-left: 5px;
-			font-size: 16px;
-			transition: all 0.5s;
-		}
+		.demoElement {
+			width: calc(100% / 5);
+			margin-bottom: 50px;
+			transition: all 0.7s;
 
-		// Freccia Su al hover
-		&:hover .downLanding {
-			transform: rotate(180deg);
-		}
-
-		&:hover {
-			cursor: pointer;
-			text-decoration: underline;
-			text-decoration-thickness: 3px;
-		}
-
-		// SottoMenu
-		.conSottoMenu {
-			position: absolute;
-			top: 100%;
-			left: -50%;
-			width: 200%;
-			box-shadow: 5px 10px 10px gray;
-			padding-top: 50px;
-			display: flex;
-			flex-wrap: wrap;
-			text-align: center;
-			background-color: white;
-			img {
-				margin-bottom: 20px;
-			}
-
-			.demoElement {
-				width: calc(100% / 5);
-				margin-bottom: 50px;
-				transition: all 0.7s;
-
-				&:hover {
-					transform: scale(1.2);
-					box-shadow: 5px 10px 10px gray;
-				}
+			&:hover {
+				transform: scale(1.2);
+				box-shadow: 5px 10px 10px gray;
 			}
 		}
 	}
+}
 
-	// Menu Components
-	.menuElementComponents {
+// Menu Components
+.menuElementComponents {
+	display: flex;
+	align-items: center;
+	// Titolo Pages
+	.pagesTitle {
+		font-size: 1.2rem;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: bold;
+	}
+
+	// Freccia Giu
+	.downLanding {
+		margin-left: 5px;
+		font-size: 16px;
+		transition: all 0.5s;
+	}
+
+	// Freccia Su al hover
+	&:hover .downLanding {
+		transform: rotate(180deg);
+	}
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		text-decoration-thickness: 3px;
+	}
+
+	// SottoMenu
+	.sottomenu {
+		position: absolute;
+		top: 100%;
+		left: 0%;
+		box-shadow: 5px 10px 10px gray;
 		display: flex;
-		align-items: center;
-		// Titolo Pages
-		.pagesTitle {
-			font-size: 1.2rem;
-			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+		gap: 50px;
+		padding: 30px 10px;
+		background-color: white;
+
+		// Elementi del sottoMenu
+		.sottoMenuElement {
+			margin-bottom: 5px;
+			font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
 				sans-serif;
-			font-weight: bold;
-		}
-
-		// Freccia Giu
-		.downLanding {
-			margin-left: 5px;
-			font-size: 16px;
-			transition: all 0.5s;
-		}
-
-		// Freccia Su al hover
-		&:hover .downLanding {
-			transform: rotate(180deg);
-		}
-
-		&:hover {
 			cursor: pointer;
-			text-decoration: underline;
-			text-decoration-thickness: 3px;
-		}
+			transition: all 1s;
+			padding: 10px;
 
-		// SottoMenu
-		.sottomenu {
-			position: absolute;
-			top: 100%;
-			left: 0%;
-			box-shadow: 5px 10px 10px gray;
-			display: flex;
-			gap: 50px;
-			padding: 30px 10px;
-			background-color: white;
-
-			// Elementi del sottoMenu
-			.sottoMenuElement {
-				margin-bottom: 5px;
-				font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
-					sans-serif;
-				cursor: pointer;
-				transition: all 1s;
-				padding: 10px;
-
-				&:hover {
-					transform: scale(1.1);
-					box-shadow: 5px 5px 10px;
-					color: rgba(137, 136, 136, 1);
-				}
+			&:hover {
+				transform: scale(1.1);
+				box-shadow: 5px 5px 10px;
+				color: rgba(137, 136, 136, 1);
 			}
 		}
 	}
+}
 
-	// Menu Docs
-	.menuElementDocs {
-		display: flex;
-		align-items: center;
-		// Landing Title
-		.title {
-			font-size: 1.2rem;
-			font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+// Menu Docs
+.menuElementDocs {
+	display: flex;
+	align-items: center;
+	// Landing Title
+	.title {
+		font-size: 1.2rem;
+		font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+			sans-serif;
+		font-weight: bold;
+	}
+
+	// Freccia Giu
+	.downLanding {
+		margin-left: 5px;
+		font-size: 16px;
+		transition: all 0.5s;
+	}
+
+	// Freccia Su al hover
+	&:hover .downLanding {
+		transform: rotate(180deg);
+	}
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: underline;
+		text-decoration-thickness: 3px;
+	}
+
+	// SottoMenu
+	.contSottoMenu {
+		position: absolute;
+		top: 100%;
+		box-shadow: 5px 10px 10px gray;
+		padding: 20px 10px 10px 10px;
+		background-color: white;
+
+		// Elementi del sottoMenu
+		.sottoMenuElement {
+			margin-bottom: 10px;
+			font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
 				sans-serif;
-			font-weight: bold;
-		}
-
-		// Freccia Giu
-		.downLanding {
-			margin-left: 5px;
-			font-size: 16px;
-			transition: all 0.5s;
-		}
-
-		// Freccia Su al hover
-		&:hover .downLanding {
-			transform: rotate(180deg);
-		}
-
-		&:hover {
 			cursor: pointer;
-			text-decoration: underline;
-			text-decoration-thickness: 3px;
-		}
+			transition: all 1s;
+			padding: 10px;
 
-		// SottoMenu
-		.contSottoMenu {
-			position: absolute;
-			top: 100%;
-			box-shadow: 5px 10px 10px gray;
-			padding: 20px 10px 10px 10px;
-			background-color: white;
-
-			// Elementi del sottoMenu
-			.sottoMenuElement {
-				margin-bottom: 10px;
-				font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
-					sans-serif;
-				cursor: pointer;
-				transition: all 1s;
-				padding: 10px;
-
-				&:hover {
-					transform: scale(1.1);
-					box-shadow: 5px 5px 10px;
-					color: rgba(137, 136, 136, 1);
-				}
+			&:hover {
+				transform: scale(1.1);
+				box-shadow: 5px 5px 10px;
+				color: rgba(137, 136, 136, 1);
 			}
 		}
 	}
+}
+.dark #NavBar {
+	color: white;
+}
+.dark .contSottoMenu,
+.dark .sottomenu,
+.dark .conSottoMenu {
+	background-color: rgba(28, 40, 54, 1);
+	border: 1px solid rgb(55, 68, 83);
 }
 </style>
