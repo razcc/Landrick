@@ -72,8 +72,9 @@ export default {
 	background: linear-gradient(
 		0deg,
 		rgb(255, 255, 255) 0%,
-		rgba(203, 210, 224, 0.719) 50%,
-		rgb(255, 255, 255) 100%
+		rgb(179, 193, 221) 30%,
+		rgb(179, 193, 221) 50%,
+		rgb(179, 193, 221) 100%
 	);
 
 	.contNav {

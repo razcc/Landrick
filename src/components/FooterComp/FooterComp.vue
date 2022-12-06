@@ -29,6 +29,9 @@
 			</div>
 
 			<!-- Links Comp -->
+			<div class="contLink">
+				<UsefullLinkComp />
+			</div>
 
 			<!-- Newsletter -->
 			<div class="newsletterCont">
@@ -82,9 +85,12 @@
 </template>
 
 <script>
+import UsefullLinkComp from "./UsefullLinkComp.vue";
 export default {
 	name: "FooterComp",
-	components: {},
+	components: {
+		UsefullLinkComp,
+	},
 	data() {
 		return {
 			arrCardPayment: [
@@ -107,132 +113,136 @@ export default {
 <style lang="scss" scoped>
 footer {
 	background-color: rgba(32, 41, 66, 1);
-}
 
-// Riga 1
-.row1 {
-	width: 60%;
-	margin: auto;
-	padding: 70px 0;
-	display: flex;
-	justify-content: space-between;
-
-	// Sezione Social
-	.social {
-		h2 {
-			color: white;
-			margin-bottom: 30px;
-		}
-		p {
-			color: rgba(164, 172, 181, 1);
-			margin-bottom: 25px;
-		}
-
-		// Icona social
-		.socialIcon {
-			border: 1px solid rgba(164, 172, 181, 1);
-			border-radius: 7px;
-			color: rgba(164, 172, 181, 1);
-			font-size: 1.3rem;
-			padding: 5px;
-			width: 25px;
-			height: 25px;
-			margin-right: 5px;
-			transition: all 0.5s;
-			&:hover {
-				background-color: blue;
-				border: 1px solid blue;
-			}
-		}
-	}
-
-	// NewsLetter
-	.newsletterCont {
-		h2 {
-			color: white;
-			margin-bottom: 30px;
-		}
-		p {
-			color: rgba(164, 172, 181, 1);
-			margin-bottom: 25px;
-		}
-
-		// Input  Container
-		.inputCont {
-			color: rgba(164, 172, 181, 1);
-
-			.asterisco {
-				color: red;
-			}
-
-			// Input
-			.input {
-				width: 100%;
-				border: none;
-				background-color: rgba(39, 49, 79, 1);
-				padding: 0px;
-				border-radius: 7px;
-				margin-top: 10px;
-				margin-bottom: 20px;
-				display: flex;
-				align-items: center;
-				padding-left: 10px;
-				input {
-					background-color: transparent;
-					border: none;
-					width: 100%;
-					padding: 10px;
-					outline: none;
-					color: white;
-				}
-				.fa-envelope {
-					font-size: 1.1rem;
-				}
-			}
-
-			// Bottone
-			.btn {
-				width: 100%;
-				background-color: rgba(34, 46, 81, 1);
-				color: rgba(45, 80, 194, 1);
-				padding: 10px;
-				text-align: center;
-				font-size: 1.1rem;
-				border-radius: 10px;
-				cursor: pointer;
-				box-shadow: 2px 5px 5px rgba(33, 33, 243, 0.205);
-				transition: all 0.5s;
-
-				&:hover {
-					color: white;
-					background-color: blue;
-				}
-			}
-		}
-	}
-}
-
-// Riga 2
-.row2Cont {
-	border-top: 1px solid rgb(70, 81, 114);
-	.row2 {
-		padding: 20px;
+	// Riga 1
+	.row1 {
 		width: 60%;
 		margin: auto;
-		color: rgba(164, 172, 181, 1);
+		padding: 70px 0;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+		gap: 30px;
 
-		// Cuore
-		.cuore {
-			color: red;
+		// Sezione Social
+		.social {
+			width: calc(100% / 4);
+			h2 {
+				color: white;
+				margin-bottom: 30px;
+			}
+			p {
+				color: rgba(164, 172, 181, 1);
+				margin-bottom: 25px;
+			}
+
+			// Icona social
+			.socialIcon {
+				border: 1px solid rgba(164, 172, 181, 1);
+				border-radius: 7px;
+				color: rgba(164, 172, 181, 1);
+				font-size: 1.3rem;
+				padding: 5px;
+				width: 25px;
+				height: 25px;
+				margin-right: 5px;
+				transition: all 0.5s;
+				&:hover {
+					background-color: blue;
+					border: 1px solid blue;
+				}
+			}
 		}
-		// Card Container
-		.cardCont {
+
+		// NewsLetter
+		.newsletterCont {
+			width: calc(100% / 4);
+
+			h2 {
+				color: white;
+				margin-bottom: 30px;
+			}
+			p {
+				color: rgba(164, 172, 181, 1);
+				margin-bottom: 25px;
+			}
+
+			// Input  Container
+			.inputCont {
+				color: rgba(164, 172, 181, 1);
+
+				.asterisco {
+					color: red;
+				}
+
+				// Input
+				.input {
+					width: 100%;
+					border: none;
+					background-color: rgba(39, 49, 79, 1);
+					padding: 0px;
+					border-radius: 7px;
+					margin-top: 10px;
+					margin-bottom: 20px;
+					display: flex;
+					align-items: center;
+					padding-left: 10px;
+					input {
+						background-color: transparent;
+						border: none;
+						width: 100%;
+						padding: 10px;
+						outline: none;
+						color: white;
+					}
+					.fa-envelope {
+						font-size: 1.1rem;
+					}
+				}
+
+				// Bottone
+				.btn {
+					width: 100%;
+					background-color: rgba(34, 46, 81, 1);
+					color: rgba(45, 80, 194, 1);
+					padding: 10px;
+					text-align: center;
+					font-size: 1.1rem;
+					border-radius: 10px;
+					cursor: pointer;
+					box-shadow: 2px 5px 5px rgba(33, 33, 243, 0.205);
+					transition: all 0.5s;
+
+					&:hover {
+						color: white;
+						background-color: blue;
+					}
+				}
+			}
+		}
+	}
+
+	// Riga 2
+	.row2Cont {
+		border-top: 1px solid rgb(70, 81, 114);
+		.row2 {
+			padding: 20px;
+			width: 60%;
+			margin: auto;
+			color: rgba(164, 172, 181, 1);
 			display: flex;
-			img {
-				width: 80%;
+			justify-content: space-between;
+			align-items: center;
+
+			// Cuore
+			.cuore {
+				color: red;
+			}
+			// Card Container
+			.cardCont {
+				display: flex;
+				img {
+					width: 80%;
+				}
 			}
 		}
 	}
