@@ -3,10 +3,11 @@
 		<div class="container">
 			<!-- Titolo e paragrafo -->
 			<div class="contTitle">
-				<span class="">Quickstart</span>
+				<span class="textBlue">Quickstart</span>
 				<h2>Awesome isn't it? Let's dive in!</h2>
 				<p>
-					Start working with <span>Landrick</span> that can provide
+					Start working with
+					<span class="textBlue">Landrick</span> that can provide
 					everything you need to generate awareness, drive traffic,
 					connnect
 				</p>
@@ -131,78 +132,155 @@ export default {
 	margin: auto;
 	text-align: center;
 	margin-bottom: 8%;
+	color: rgba(142, 155, 173, 1);
+}
 
-	// Titolo e Paragrafo
-	.contTitle {
-		width: 60%;
-		margin: auto;
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-		margin-bottom: 80px;
-		span {
-			color: blue;
-			font-weight: bold;
-		}
-		h2 {
-			font-size: 1.7rem;
-			margin-bottom: 20px;
-		}
-		p {
-			color: rgba(142, 155, 173, 1);
-		}
+// Titolo e Paragrafo
+.contTitle {
+	width: 60%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 80px;
+	span {
+		color: blue;
+		font-weight: bold;
 	}
+	h2 {
+		font-size: 1.7rem;
+		margin-bottom: 20px;
+		color: black;
+	}
+}
 
-	// Table QuickStart
-	.quickstartTable {
-		background-color: rgba(60, 72, 88, 1);
-		border-radius: 7px;
-		padding: 20px 20px 30px 20px;
+// Table QuickStart
+.quickstartTable {
+	background-color: rgba(60, 72, 88, 1);
+	border-radius: 7px;
+	padding: 20px 20px 30px 20px;
 
-		// Riga elementi
-		.row {
-			display: flex;
-			justify-content: space-around;
-			background-color: rgba(79, 90, 105, 1);
-			padding: 7px;
+	// Riga elementi
+	.row {
+		display: flex;
+		justify-content: space-around;
+		background-color: rgba(79, 90, 105, 1);
+		padding: 7px;
+		border-radius: 5px;
+		margin-bottom: 20px;
+		// SIngolo Elemento
+		div {
+			width: calc(100% / 4);
+			padding: 10px;
+			font-size: 1.2rem;
 			border-radius: 5px;
-			margin-bottom: 20px;
-			// SIngolo Elemento
-			div {
-				width: calc(100% / 4);
-				padding: 10px;
-				font-size: 1.2rem;
-				border-radius: 5px;
-				transition: all 0.6s;
+			transition: all 0.6s;
 
-				&:hover {
-					cursor: pointer;
-				}
+			&:hover {
+				cursor: pointer;
 			}
 		}
-
-		// Comando Propt
-		.comandoPrompt {
-			text-align: start;
-			color: rgb(128, 162, 209);
-			font-size: 1.1rem;
-		}
 	}
 
-	// Check
-	.checkCont {
-		display: flex;
-		gap: 50px;
-		margin-top: 10px;
+	// Comando Propt
+	.comandoPrompt {
+		text-align: start;
+		color: rgb(128, 162, 209);
+		font-size: 1.1rem;
+	}
+}
 
-		.check {
-			font-size: 0.7rem;
-			font-weight: bold;
-			color: green;
-			border: 1px solid green;
-			padding: 3px;
-			border-radius: 50%;
+// Check
+.checkCont {
+	display: flex;
+	gap: 50px;
+	margin-top: 10px;
+
+	.check {
+		font-size: 0.7rem;
+		font-weight: bold;
+		color: green;
+		border: 1px solid green;
+		padding: 3px;
+		border-radius: 50%;
+	}
+}
+// Titolo e Paragrafo
+.contTitle {
+	width: 60%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 80px;
+}
+.textBlue {
+	color: blue;
+	font-weight: bold;
+}
+.dark .textBlue {
+	color: rgb(9, 9, 172);
+}
+h2 {
+	font-size: 1.7rem;
+	margin-bottom: 20px;
+	color: black;
+}
+
+// Table QuickStart
+.quickstartTable {
+	background-color: rgba(60, 72, 88, 1);
+	border-radius: 7px;
+	padding: 20px 20px 30px 20px;
+}
+// Riga elementi
+.row {
+	display: flex;
+	justify-content: space-around;
+	background-color: rgba(79, 90, 105, 1);
+	padding: 7px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	// SIngolo Elemento
+	div {
+		width: calc(100% / 4);
+		padding: 10px;
+		font-size: 1.2rem;
+		border-radius: 5px;
+		transition: all 0.6s;
+
+		&:hover {
+			cursor: pointer;
 		}
 	}
+}
+// Comando Propt
+.comandoPrompt {
+	text-align: start;
+	color: rgb(128, 162, 209);
+	font-size: 1.1rem;
+}
+
+// Check
+.checkCont {
+	display: flex;
+	gap: 50px;
+	margin-top: 10px;
+}
+.checkText {
+	color: black;
+}
+.check {
+	font-size: 0.7rem;
+	font-weight: bold;
+	color: green;
+	border: 1px solid green;
+	padding: 3px;
+	border-radius: 50%;
+}
+
+.dark h2,
+.dark .checkText {
+	color: rgb(199, 199, 199);
 }
 </style>

@@ -59,89 +59,91 @@ export default {
 	width: 60%;
 	margin: auto;
 	justify-content: space-between;
+	color: rgba(149, 161, 178, 1);
+}
+// Col Left
+.colLeft {
+	width: 40%;
+}
 
-	// Col Left
-	.colLeft {
-		width: 40%;
+// Titolo
+h1 {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+	margin-bottom: 10%;
+	color: black;
+}
+// DarkMode
+.dark h1 {
+	color: rgb(199, 199, 199);
+}
 
-		// Titolo
-		h1 {
-			font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-				"Lucida Sans", Arial, sans-serif;
-			margin-bottom: 10%;
-		}
+// Paragrafo
+p {
+	margin-bottom: 7%;
+}
 
-		// Paragrafo
-		p {
-			margin-bottom: 7%;
-			color: rgba(149, 161, 178, 1);
-		}
-
-		// Ckeck List
-		.check {
-			color: rgba(149, 161, 178, 1);
-
-			div {
-				margin-bottom: 10px;
-			}
-
-			// Ckck Symbol
-			.fa-check {
-				color: blue;
-				border: 1px solid blue;
-				padding: 1px;
-				border-radius: 50%;
-				margin-right: 10px;
-			}
-		}
-
-		// Button
-		.btnReadMore {
-			border-radius: 5px;
-			padding: 10px 25px;
-			margin-top: 20px;
-			font-weight: bold;
-			border: none;
-			background: rgba(47, 85, 212, 1);
-			color: white;
-			cursor: pointer;
-			position: relative;
-			transition: all 0.5s ease;
-			z-index: 1;
-		}
-
-		.btnReadMore:after {
-			position: absolute;
-			content: "";
-			width: 100%;
-			height: 0;
-			top: 0;
-			left: 0;
-			z-index: -1;
-			border-radius: 5px;
-			background-color: rgba(15, 113, 115, 1);
-			transition: all 0.5s;
-		}
-		.btnReadMore:hover {
-			color: black;
-			box-shadow: 4px 8px 15px gray;
-		}
-		.btnReadMore:hover:after {
-			top: auto;
-			bottom: 0;
-			height: 100%;
-		}
-		.btnReadMore:active {
-			top: 2px;
-		}
+// Ckeck List
+.check {
+	div {
+		margin-bottom: 10px;
 	}
 
-	// ColRight
-	.colRight {
-		width: 50%;
-		img {
-			width: 100%;
-		}
+	// Ckck Symbol
+	.fa-check {
+		color: blue;
+		border: 1px solid blue;
+		padding: 1px;
+		border-radius: 50%;
+		margin-right: 10px;
+	}
+}
+
+// Button
+.btnReadMore {
+	border-radius: 5px;
+	padding: 10px 25px;
+	margin-top: 20px;
+	font-weight: bold;
+	border: none;
+	background: rgba(47, 85, 212, 1);
+	color: white;
+	cursor: pointer;
+	position: relative;
+	transition: all 0.5s ease;
+	z-index: 1;
+}
+
+.btnReadMore:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 0;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	border-radius: 5px;
+	background-color: rgba(15, 113, 115, 1);
+	transition: all 0.5s;
+}
+.btnReadMore:hover {
+	color: black;
+	box-shadow: 4px 8px 15px gray;
+}
+.btnReadMore:hover:after {
+	top: auto;
+	bottom: 0;
+	height: 100%;
+}
+.btnReadMore:active {
+	top: 2px;
+}
+
+// ColRight
+.colRight {
+	width: 50%;
+	img {
+		width: 100%;
 	}
 }
 </style>
