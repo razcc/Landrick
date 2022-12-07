@@ -111,8 +111,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// DarkModeFooter
+
 footer {
 	background-color: rgba(32, 41, 66, 1);
+	color: rgba(164, 172, 181, 1);
+	h2 {
+		color: white;
+		margin-bottom: 30px;
+	}
 
 	// Riga 1
 	.row1 {
@@ -126,25 +133,18 @@ footer {
 		// Sezione Social
 		.social {
 			width: calc(100% / 4);
-			h2 {
-				color: white;
-				margin-bottom: 30px;
-			}
-			p {
-				color: rgba(164, 172, 181, 1);
-				margin-bottom: 25px;
-			}
 
 			// Icona social
 			.socialIcon {
 				border: 1px solid rgba(164, 172, 181, 1);
 				border-radius: 7px;
-				color: rgba(164, 172, 181, 1);
 				font-size: 1.3rem;
 				padding: 5px;
 				width: 25px;
 				height: 25px;
 				margin-right: 5px;
+				margin-top: 20px;
+
 				transition: all 0.5s;
 				&:hover {
 					background-color: blue;
@@ -157,19 +157,8 @@ footer {
 		.newsletterCont {
 			width: calc(100% / 4);
 
-			h2 {
-				color: white;
-				margin-bottom: 30px;
-			}
-			p {
-				color: rgba(164, 172, 181, 1);
-				margin-bottom: 25px;
-			}
-
 			// Input  Container
 			.inputCont {
-				color: rgba(164, 172, 181, 1);
-
 				.asterisco {
 					color: red;
 				}
@@ -228,7 +217,6 @@ footer {
 			padding: 20px;
 			width: 60%;
 			margin: auto;
-			color: rgba(164, 172, 181, 1);
 			display: flex;
 			justify-content: space-between;
 			align-items: center;

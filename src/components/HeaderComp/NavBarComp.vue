@@ -520,7 +520,7 @@ export default {
 	}
 }
 .dark #NavBar {
-	color: white;
+	color: rgb(199, 199, 199);
 }
 .dark .contSottoMenu,
 .dark .sottomenu,
