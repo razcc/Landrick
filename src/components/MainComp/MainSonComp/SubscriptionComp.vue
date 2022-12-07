@@ -46,30 +46,33 @@ export default {
 	gap: 40px;
 	align-items: center;
 	color: rgba(149, 161, 185, 1);
-	h2 {
-		margin-bottom: 30px;
-		color: black;
-	}
+}
+h2 {
+	font-size: 2rem;
+	margin-bottom: 30px;
+	color: black;
+}
+.dark h2 {
+	color: rgb(199, 199, 199);
+}
+// Title Cont
+.titleCont {
+	width: 50%;
+	margin: auto;
+	text-align: center;
 
-	// Title Cont
-	.titleCont {
-		width: 50%;
+	p {
+		font-size: 1rem;
+		width: 60%;
 		margin: auto;
-		text-align: center;
-
-		p {
-			font-size: 1.2rem;
-			width: 60%;
-			margin: auto;
-			span {
-				font-weight: bold;
-			}
+		span {
+			font-weight: bold;
 		}
 	}
+}
 
-	// Card Cont
-	.cardCont {
-		width: 60%;
-	}
+// Card Cont
+.cardCont {
+	width: 60%;
 }
 </style>
