@@ -58,63 +58,85 @@ export default {
 		rgb(203, 210, 224) 0%,
 		rgb(255, 255, 255) 100%
 	);
+}
+.dark #introComp {
+	background-color: rgba(28, 40, 54, 1);
+	background: linear-gradient(
+		0deg,
+		rgba(28, 40, 54, 1) 0%,
+		rgb(42, 53, 66) 100%
+	);
+}
 
-	// Container Intro
-	.containerIntro {
-		display: flex;
-		justify-content: space-around;
-		width: 70%;
-		margin: auto;
-		padding-top: 10%;
+// Container Intro
+.containerIntro {
+	display: flex;
+	justify-content: space-around;
+	width: 70%;
+	margin: auto;
+	padding-top: 10%;
+}
+// Col lefT
+.colLeft {
+	width: 50%;
+}
 
-		// Col lefT
-		.colLeft {
-			width: 50%;
-			// Bottone development
-			.development {
-				border: 1px solid rgba(209, 218, 246, 1);
-				background-color: rgb(222, 229, 240);
-				display: inline-block;
-				font-size: 1.2rem;
-				padding: 4px 15px;
-				border-radius: 30px;
-			}
-			// Titolo
-			h2 {
-				font-size: 3rem;
-				text-transform: capitalize;
-			}
+// Bottone development
+.development {
+	border: 1px solid rgba(209, 218, 246, 1);
+	background-color: rgb(222, 229, 240);
+	color: black;
+	display: inline-block;
+	padding: 4px 15px;
+	border-radius: 30px;
+}
+.dark .development {
+	border: 1px solid rgb(62, 78, 97);
+	background-color: rgba(28, 40, 54, 1);
+	color: rgb(17, 14, 202);
+	letter-spacing: 1px;
+}
 
-			// Paragrafo
-			p {
-				font-size: 1.5rem;
-				margin-top: 5%;
-				color: rgb(177, 194, 221);
-			}
+// Titolo
+h2 {
+	font-size: 3rem;
+	text-transform: capitalize;
+	color: black;
+}
+.dark h2 {
+	color: rgb(201, 197, 197);
+}
 
-			.contButton {
-				margin-top: 5%;
-				button {
-					font-size: 1.2rem;
-					padding: 10px 20px;
-					margin-right: 25px;
-					margin-bottom: 10px;
-					border-radius: 7px;
-					border: none;
-				}
-				.getStarted {
-					background-color: rgba(47, 85, 212, 1);
-					color: white;
-				}
-				.documantation {
-					color: rgba(64, 99, 216, 1);
-					border: 1px solid rgba(64, 99, 216, 1);
-				}
-				.version {
-					color: rgb(137, 148, 165);
-				}
-			}
-		}
+// Paragrafo
+p {
+	font-size: 1.2rem;
+	margin-top: 5%;
+	color: rgb(177, 194, 221);
+}
+
+.contButton {
+	margin-top: 5%;
+	button {
+		font-size: 1.2rem;
+		padding: 10px 20px;
+		margin-right: 25px;
+		margin-bottom: 10px;
+		border-radius: 7px;
+		border: none;
 	}
+	.getStarted {
+		background-color: rgba(47, 85, 212, 1);
+		color: white;
+	}
+	.documantation {
+		color: rgba(64, 99, 216, 1);
+		border: 1px solid rgba(64, 99, 216, 1);
+	}
+	.version {
+		color: rgb(137, 148, 165);
+	}
+}
+.dark .contButton .documantation {
+	background-color: rgba(28, 40, 54, 1);
 }
 </style>

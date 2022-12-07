@@ -35,96 +35,116 @@
         display: flex;
         align-items: center;
 
-        // Contenitore Theme option
-        .themeOption
-        {
-            background-color: rgba(234, 242, 248, 0.521);
-            font-size: 22px;
-            border-radius: 0px 20px 20px 0;
-            box-shadow: 0px 10px 20px rgb(100, 99, 99);
-            transition: all 0.5s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 4px;
 
-            // Title them box
-            .themeTitle
-            {
-                padding: 10px 35px;
-            }
-
-            // Tema Chiaro
-            .themeLight
-            {
-                margin-top: 20px;
-                margin-bottom: 20px;
-                padding: 10px 25px;
-                text-align: center;
-                width: 60%;
-                border: 1px solid rgba(128, 128, 128, 0.13);
-                border-radius: 5px;
-                background-color: rgba(88, 87, 87, 0.308);
-                color: white;
-                transition: all 0.6s;
-
-
-                &:hover
-                {
-                    background-color: rgba(102, 102, 102, 0.185);
-                    color: black;
-                    cursor: pointer;
-
-                }
-            }
-
-            // tema Scuro
-            .themeDark
-            {
-                padding: 10px 25px;
-                margin-bottom: 20px;
-                text-align: center;
-                width: 60%;
-                border: 1px solid rgba(12, 3, 133, 0.384);
-                border-radius: 5px;
-                background-color: rgba(0, 0, 0, 0.712);
-                transition: all 0.6s;
-
-                &:hover
-                {
-                    background-color: rgba(0, 0, 0, 0.651);
-                    color: white;
-                    cursor: pointer;
-
-                }
-            }
-        }
-
-        // Contenitore Sun
-        .sunCont
-        {
-            background-color: white;
-            border-radius: 0px 15px 15px 0px;
-            transition: all 0.5s;
-
-            // Sun
-            .sun
-            {
-                padding: 10px;
-                animation-name: theme;
-                animation-duration: 2s;
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
-
-                &:hover
-                {
-                    cursor: pointer;
-                }
-            }
-        }
-
-        // Icona sole con animazione
     }
+
+    // Contenitore Theme option
+    .themeOption
+    {
+        background-color: rgba(234, 242, 248, 0.521);
+        font-size: 22px;
+        border-radius: 0px 20px 20px 0;
+        box-shadow: 0px 10px 20px rgb(100, 99, 99);
+        transition: all 0.5s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+
+        // Title them box
+        .themeTitle
+        {
+            padding: 10px 35px;
+        }
+
+        // Tema Chiaro
+        .themeLight
+        {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 10px 25px;
+            text-align: center;
+            width: 60%;
+            border: 1px solid rgba(128, 128, 128, 0.13);
+            border-radius: 5px;
+            background-color: rgba(88, 87, 87, 0.308);
+            color: white;
+            transition: all 0.6s;
+
+
+            &:hover
+            {
+                background-color: rgba(102, 102, 102, 0.185);
+                color: black;
+                cursor: pointer;
+
+            }
+        }
+
+        // tema Scuro
+        .themeDark
+        {
+            padding: 10px 25px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 60%;
+            border: 1px solid rgba(12, 3, 133, 0.384);
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.712);
+            transition: all 0.6s;
+
+            &:hover
+            {
+                background-color: rgba(0, 0, 0, 0.651);
+                color: white;
+                cursor: pointer;
+
+            }
+        }
+    }
+
+    .dark .themeOption
+    {
+        background-color: rgba(8, 9, 80, 0.521);
+        box-shadow: 0px 7px 8px rgb(82, 81, 81);
+
+    }
+
+    .dark .themeOption .themeLight
+    {
+        background-color: rgba(114, 106, 106, 0.712);
+
+    }
+
+    .dark .themeOption .themeDark
+    {
+        background-color: rgba(32, 29, 29, 0.712);
+
+    }
+
+    // Contenitore Sun
+    .sunCont
+    {
+        background-color: white;
+        border-radius: 0px 15px 15px 0px;
+        transition: all 0.5s;
+
+        // Sun
+        .sun
+        {
+            padding: 10px;
+            animation-name: theme;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            &:hover
+            {
+                cursor: pointer;
+            }
+        }
+    }
+
 
     // Animazione SUn
     @keyframes theme

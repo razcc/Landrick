@@ -1,6 +1,6 @@
 <template>
 	<!-- Aziende Clienti -->
-	<div class="footer">
+	<div class="clientiComp">
 		<div class="contClienti">
 			<span
 				class="cliente"
@@ -29,10 +29,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.footer {
+.clientiComp {
 	border-top: 1px solid rgb(187, 193, 201);
 	margin-top: 4%;
 	padding: 50px 0 30px 0;
+}
+.dark .clientiComp {
+	border-top: 1px solid rgb(61, 70, 122);
 }
 .contClienti {
 	width: 60%;
