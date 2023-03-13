@@ -260,7 +260,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./Mixins/mixinThemeBOX.scss";
+@import "./assets/Mixins/mixinThemeBOX.scss";
+
 // General
 * {
 	padding: 0;
